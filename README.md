@@ -1,4 +1,4 @@
-# C# Code Style Guide
+# C# Code Style Guide (C# 程式碼命名風格指南)
 
 Item | 採用方式 | 前綴 | 後綴 | 備註
 ---- |--------| -----|-----  | ----
