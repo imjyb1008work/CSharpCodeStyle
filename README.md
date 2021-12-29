@@ -1,8 +1,8 @@
 # C# Code Style Guide
 
-Item | 採用方式 | 前綴 | 後綴
----- |--------| -----|----
-Class | PascalCase | |
+Item | 採用方式 | 前綴 | 後綴 | 備註
+---- |--------| -----|-----  | ----
+Class | PascalCase | |  | 使用名詞或名詞片，不使用前後綴，並且與程式碼檔案名稱相同
 Interface | PascalCase | I |
 Method | PascalCase
 Enum | PascalCase
@@ -11,7 +11,7 @@ Public Field | PascalCase
 local variable | camelCase
 private field | camelCase | _ |
 
-## Class(類別)
+## [Class(類別)](https://docs.microsoft.com/zh-tw/dotnet/csharp/fundamentals/types/classes)
 
 使用大駝峰式命名法
 
@@ -37,23 +37,28 @@ private field | camelCase | _ |
 
 ## 區域變數
 
-## Interface(介面)
+## [Interface(介面)](https://docs.microsoft.com/zh-tw/dotnet/csharp/language-reference/keywords/interface)
 
 前綴一律大寫I
 
-## Enum(列舉)
+## [Enum](https://docs.microsoft.com/zh-tw/dotnet/csharp/language-reference/builtin-types/enum)(列舉)
 
 使用大駱駝峰式命名，後綴可加上Type或是Enum
 
-## 迴圈、Array、List、集合變數
+## 集合變數、迴圈、Array、List、[LINQ](https://docs.microsoft.com/zh-tw/dotnet/csharp/programming-guide/concepts/linq/)
+
+### 集合變數
+
+- 建議使用複數名詞
 
 ### for迴圈
 
 1. 請優先依序i、j、k
-1. 不建議用到4層以上的迴圈
+2. 不建議用到4層以上的迴圈
 
 例如:
-``` C#
+
+```C#
 int length = 10;
 
 for(var i = 0; i < length; i++)
@@ -67,21 +72,20 @@ for(var i = 0; i < length; i++)
 }
 ```
 
-## 集合變數
-- 建議使用複數名詞
+### Array vs List
 
-## Array vs List
-使用Array建議的場合
--- 集合大小固定
--- 資料不可變
--- 要求執行速度
+- 使用Array建議的情境
+  
+  - 集合大小固定
+  - 資料不可變
+  - 要求執行速度
+- 使用List建議的情境
+  
+  - 集合大小不確定
+  - 資料可變動
+  - 程式撰寫靈活性
 
-## 使用List建議的場合
-- 集合大小不確定
-- 資料可變動
-- 程式撰寫靈活性
-
-Linq結果的查詢變數後綴可接Query
+LINQ結果的查詢變數後綴可接Query
 
 ## 布林變數
 
