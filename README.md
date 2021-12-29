@@ -85,7 +85,19 @@ for(var i = 0; i < length; i++)
   - 資料可變動
   - 程式撰寫靈活性
 
+### LINQ
+
 LINQ結果的查詢變數後綴可接Query
+
+例如:
+```C#
+int[] numbers = new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+var numbersQuery = 
+	from x in numbers
+	where x % 2 == 0
+	select x;
+```
 
 ## 布林變數
 
